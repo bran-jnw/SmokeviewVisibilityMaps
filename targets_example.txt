@@ -1,0 +1,8 @@
+MassExtinctionCoefficient=8700.0 
+FDS_VISIBILITY_FACTOR=8.0 
+lowerC=6.0
+upperC=10.0
+Target=North, 35, 30, 2.0
+Target=South, 35, -9.6, 2.0
+Target=FireRoom, 24.0, 1.6, 2.0
+Target=Outside, 35.0, 5.0, 5.0

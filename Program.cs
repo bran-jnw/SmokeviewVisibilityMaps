@@ -6,7 +6,7 @@ using System.Numerics;
 using System.Security;
 using System.Windows.Forms;
 
-namespace SmokeviewVisibilityMapper
+namespace SmokeviewVisibilityMaps
 {
     internal static class Program
     {

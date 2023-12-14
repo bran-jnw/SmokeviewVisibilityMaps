@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using static System.Windows.Forms.LinkLabel;
 
-namespace SmokeviewVisibilityMapper
+namespace SmokeviewVisibilityMaps
 {    
     public class SMV_data
     {

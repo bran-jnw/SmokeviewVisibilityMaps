@@ -8,7 +8,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-namespace SmokeviewVisibilityMapper
+namespace SmokeviewVisibilityMaps
 {
     internal static class ReadSF
     {

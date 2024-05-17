@@ -77,6 +77,7 @@ namespace SmokeviewVisibilityMaps
                             //try to build extinction data from visibility data
                             if (extHorSlice == null)
                             {
+                                Console.WriteLine("Smokeview file does not contain suitable extinction coefficient data in z-plane [m] " + target.pos.Z + " for target " + target.name + ", attempting to create from visibility slice.");
                                 sliceCollection.BuildExtinctionFromVisibility(target);
                                 extHorSlice = sliceCollection.GetSuitableExtinctionSlice(target);
                             }
@@ -98,7 +99,7 @@ namespace SmokeviewVisibilityMaps
                             }
                             else
                             {
-                                Console.WriteLine("Smokeview file does not contain suitable extinction coefficient data in z-plane [m] " + target.pos.Z + " for target " + target.name);
+                                Console.WriteLine("Smokeview file does not contain any suitable data in the specified z-plane [m] " + target.pos.Z + " for target " + target.name);
                             }
                         }  
                     }

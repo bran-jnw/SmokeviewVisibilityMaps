@@ -24,7 +24,11 @@ namespace SmokeviewVisibilityMaps
             //save this info for when we add are new slices in the vismaps smv
             maxSliceIndex = sliceIndex > maxSliceIndex ? sliceIndex : maxSliceIndex;
 
-            if (quantity != "SOOT EXTINCTION COEFFICIENT" || bounds.k1 != bounds.k2 || !cellCentered)
+            if(!cellCentered || bounds.k1 != bounds.k2)
+            {
+                return;
+            }
+            if (quantity != "SOOT EXTINCTION COEFFICIENT" && quantity != "SOOT VISIBILITY")
             {
                 return;
             }
@@ -110,6 +114,7 @@ namespace SmokeviewVisibilityMaps
             {
                 if (slice.Value.quantity == "SOOT VISIBILITY" && slice.Value.IsInCorrectZPlane(target))
                 {
+                    Console.WriteLine("Found suitable visibility slice, converting...");
                     slice.Value.quantity = "SOOT EXTINCTION COEFFICIENT";
                     for (int j = 0; j < slice.Value.subSlices.Count; j++)
                     {
